@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="sl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Imenik</title>
+</head>
+
+<body>
+	<header>
+		Telefonski Imenik
+	</header>
+
+	<nav>
+		<a href="viri.html">Viri</a>
+		<a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=20875">Navodila za nalogo</a>
+	</nav>
+
+	<div id="funkcije">
+		<fieldset>
+			<legend>Dodaj kontakt</legend>
+			<div class="inputs">
+				<input id="first" type="text" placeholder="Ime" autofocus /> <br />
+				<input id="last" type="text" placeholder="Priimek" /> <br />
+				<input id="addr" type="text" placeholder="Naslov" /> <br />
+				<input id="phone" type="text" placeholder="Telefonska številka: {Format 012345678}" /> <br />
+			</div>
+			<br />
+			<button id="dodajButton">Dodaj</button>
+		</fieldset>
+	</div>
+
+	<div class="search-container">
+		<i class="fa fa-search"></i>
+		<input type="text" placeholder="Išči kontakt..." id="searchBar">
+	</div>
+	<img src="canclosed.png" alt="" id="trash" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+	<div id="imenik">
+		<table id="tabela">
+			<tr>
+				<th>Osebe: </th>
+				<th>Ime</th>
+				<th>Priimek</th>
+				<th>Naslov</th>
+				<th>Številka</th>
+			</tr>
+		</table>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

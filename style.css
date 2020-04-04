@@ -1,0 +1,255 @@
+body {
+	font-family: Arial;
+}
+
+body{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas: 
+	  'header' 
+	  'funkcije'
+	  'nav'
+	  'search'
+	  'trash'
+	  'imenik';
+}
+
+header {
+	background-color: rgb(240, 89, 35);
+	font-size: XX-Large;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	color: white;
+	margin: auto;
+	margin-bottom:1%;
+	grid-area: header;
+	width: 100%;
+}
+
+nav {
+	grid-area: nav;
+	margin-top: 4%;
+}
+
+nav a {
+	display: block;
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+			  0 1px 2px rgba(0, 0, 0, 0.24);
+	margin: 0;
+	text-align: center;
+	padding: 8px;
+	margin-bottom: 2%;
+	background-color: rgb(240, 89, 35);
+	border-radius: 2px;
+	color: white;
+}
+
+#funkcije {
+	grid-area: funkcije;
+	text-align: center;
+	margin: 1%;
+}
+
+fieldset {
+	border: black 1px groove;
+	border-radius: 2px;
+}
+
+legend {
+	font-weight: bold;
+}
+
+.inputs{
+	width: 60%;
+	display: inline-block;
+}
+
+input[type=text]{
+	text-align: right;
+	padding: 10px;
+	margin-bottom: 1%;
+	width: 80%;
+	text-align: center;
+	border-radius: 4px;
+}
+
+input[type=tel]{
+	text-align: right;
+	padding: 10px;
+	margin-bottom: 1%;
+	width: 80%;
+	text-align: center;
+	border-radius: 4px;
+}
+
+input[type=text]:focus, input[type=tel]:focus{
+	border-color: rgb(240, 89, 35);
+}
+
+#dodajButton{
+	border: none;
+	color: black;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	border-radius: 4px;
+	border: solid 2px rgb(240, 89, 35);
+}
+
+#dodajButton:hover{
+	background-color: rgb(240, 89, 35);
+	color: white;
+}
+
+.search-container {
+	grid-area: search;
+}
+
+.search-container i{
+	margin-left:2%;
+	margin-right: 2%;
+}
+
+.search-container input[type=text]{
+	width: 91%;
+	text-align: left;
+}
+
+#trash {
+	width: 15%;
+	padding: 2%;
+	margin: auto;
+	grid-area: trash;
+}
+
+#imenik {
+	margin: auto;
+	margin-top: 1%;
+	width: 100%;
+	grid-area: imenik;
+}
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+	width: 100%;
+	table-layout: fixed;
+	text-align: center;
+}
+
+table tr{
+	padding: 2%;
+}
+
+table tr th{
+	border-bottom: black 1px solid;
+}
+
+table img {
+	padding: 3%;
+	width: 45%;
+	border-radius: 50%;
+}
+
+td {
+	width: 20%;
+	-webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.viri{
+	width: 80%;
+	display: inline-block;
+	grid-area: search;
+	padding-left: 2%;
+	text-align: center;
+	margin: auto;
+}
+
+.nazaj {
+	display: block;
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+			  0 1px 2px rgba(0, 0, 0, 0.24);
+	margin: auto;
+	text-align: center;
+	padding: 8px;
+	margin-bottom: 2%;
+	background-color: rgb(240, 89, 35);
+	border-radius: 2px;
+	color: white;
+	width: 70%;
+}
+
+.uporaba {
+	width: 80%;
+	float: right;
+	grid-area: trash;
+	text-align: center;
+	margin: auto;
+	margin-top: 5%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px){
+	body{
+	  display: grid;
+	  grid-template-columns: 25% 25% 25% 25%;
+	  grid-template-areas: 
+		'header header header header'
+		'nav funkcije funkcije funkcije'
+		'search search search search'
+		'trash trash trash trash'
+		'imenik imenik imenik imenik';
+	}
+	.search-container{
+		margin-top: 2%;
+	}
+	#trash{
+		width: 12%;
+	}
+}
+
+@media screen and (min-width: 992px){
+	body{
+	  display: grid;
+	  grid-template-columns: 25% 25% 25% 25%;
+	  grid-template-areas: 
+		'header header header header'
+		'nav funkcije funkcije funkcije'
+		'search search trash trash'
+		'imenik imenik imenik imenik';
+	}
+	nav a {
+		margin-bottom: 5%;
+	}
+	.search-container {
+		margin-top: 4.5%;
+		margin-left: 18.5%;
+		display: inline-block;
+	}
+	.search-container input[type=text]{
+		width: 90%;
+	}
+	table{
+		width: 80%;
+	}
+	#trash{
+		width: 15%;
+		display: inline-block;
+	}
+}
